@@ -108,7 +108,7 @@ const handleImageUpload = (images) => {
           <InputLabel>Category</InputLabel>
           <Select value={Product.categoryname} onChange={handleSelectChange('categoryname')}>
             {categories.map((category) => (
-              <MenuItem key={category._id} value={category._id}>{category.categoryname}</MenuItem>
+              <MenuItem key={category._id} value={category.categoryname}>{category.categoryname}</MenuItem>
             ))}
           </Select>
         </FormControl>
@@ -120,7 +120,7 @@ const handleImageUpload = (images) => {
           <InputLabel>Subcategory</InputLabel>
           <Select value={Product.subcategory} onChange={handleSelectChange('subcategory')}>
   {subcategories.map((subcategory) => (
-    <MenuItem key={subcategory._id} value={subcategory._id}>{subcategory.subcategory}</MenuItem>
+    <MenuItem key={subcategory._id} value={subcategory.subcategory}>{subcategory.subcategory}</MenuItem>
   ))}
 </Select>
 

@@ -9,13 +9,11 @@ const addproductSchema = new mongoose.Schema({
         required:true,
     },
     categoryname:{        
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Category',
+        type:String,
         required:true,
     },
     subcategory:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Subcategory',
+        type:String,
         required:true,
     },
     price:{

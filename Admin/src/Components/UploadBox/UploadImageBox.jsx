@@ -29,7 +29,7 @@ const UploadImageBox = ({ onUpload }) => {
       });
 
       alert("Images uploaded successfully!");
-      const uploadedURLs = response.data.image_urls;
+      const uploadedURLs = response.data.document.images;
 
       // Call the onUpload callback with the uploaded image URLs
       if (onUpload) {

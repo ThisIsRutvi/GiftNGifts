@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.post("/uploads", upload.array("images", 5), async (req, res) => {
   try {
-    if (req.files.length !== 5) {
-      return res.status(400).json({ error: "You must upload exactly 2 images." });
-    }
+    if (req.files.length === 0) {
+      return res.status(400).json({ error: "Please upload at least one image." });
+    }    
 
     const fileNames = req.files.map((file) => file.filename);
 
-    const savedImage = await addproductmodel.create({ images: fileNames });
+    const savedImage = await Product.create({ images: fileNames });
 
     res.json({ message: "Images uploaded and saved successfully!", document: savedImage });
   } catch (error) {
